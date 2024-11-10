@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Viktoria and Abner</title>
+    <link rel="stylesheet" href="./assets/style.css">
+    <link rel="shortcut icon" href="./assets/favicon.ico" type="image/x-icon"> 
+</head>
+<body>
+    <div class="container">
+        <h1 class="text-01" >Choose a card and discover the gift</h1>
+        <div class="cards">
+            <div class="card" id="card1" onclick="revealCard(1)">
+                <img src="./assets/01.jpg" class="card-image" alt="carta01">
+                <span class="card-text"> 1</span>
+                
+            </div>
+            <div class="card" id="card2" onclick="revealCard(2)">
+                <img src="./assets/02.jpg" class="card-image" alt="carta02">
+                <span class="card-text"> 2</span>
+            </div>
+            <div class="card" id="card3" onclick="revealCard(3)">
+                <img src="./assets/03.jpg" class="card-image" alt="">
+                <span class="card-text">3</span>
+                
+            </div>
+            <div class="card" id="card4" onclick="revealCard(4)">
+                <img src="./assets/04.jpg" class="card-image" alt="">
+                <span class="card-text"> 4</span>
+            </div>
+            <div class="card" id="card5" onclick="revealCard(5)">
+                <img src="./assets/05.jpg" class="card-image" alt="">
+                <span class="card-text"> 5</span>
+            </div>
+        </div>
+        <p id="resultMessage"></p>
+        <button id="resetButton" class="button" onclick="resetGame()" style="display:none;">Try Again</button>
+    </div>
+
+   
+      
+      <div class="footer-name">
+        Viktoria &amp; Abner
+      </div>
+
+    
+
+    <script src="./assets/script.js"></script>
+</body>
+</html>
+

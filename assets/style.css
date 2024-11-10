@@ -1,0 +1,226 @@
+/* Importando as fontes do Google */
+@import url('https://fonts.googleapis.com/css2?family=Press+Start+2P&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Edu+AU+VIC+WA+NT+Pre:wght@400..700&family=Press+Start+2P&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+
+/* Reset básico e estilos gerais do body */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    display: flex;
+    flex-direction: column; /* Organiza o conteúdo verticalmente */
+    justify-content: space-between; /* Garante que o conteúdo acima do rodapé ocupe o espaço */
+    min-height: 100vh; /* A altura mínima da página deve ser a altura da tela */
+    background-color: #f4f4f4;
+    margin: 0;
+}
+
+/* Estilos para a classe .text-01 */
+.text-01 {
+    font-family: 'Press Start 2P', "Roboto";
+}
+
+/* Container central com os cartões e conteúdo */
+.container {
+    text-align: center;
+    flex-grow: 1; /* Permite que o conteúdo cresça para ocupar o espaço disponível */
+    display: flex;
+    flex-direction: column;
+    justify-content: center; /* Alinha o conteúdo no centro */
+    align-items: center;
+    padding: 20px; /* Espaçamento extra */
+}
+
+/* Estilos para os cartões */
+.cards {
+    display: flex;
+    flex-wrap: wrap; /* Permite que os cartões se reorganizem em linhas */
+    justify-content: center;
+    gap: 15px; /* Espaçamento entre os cartões */
+    margin-top: 30px;
+}
+
+/* Estilo individual para cada carta */
+.card {
+    width: 120px;
+    height: 180px;
+    background-color: #4CAF50;
+    color: white;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    font-size: 18px;
+    cursor: pointer;
+    border-radius: 8px;
+    position: relative;
+    overflow: hidden;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    margin: 10px;
+    transition: transform 0.3s ease; /* Transição suave para o efeito de hover */
+}
+
+.card:hover {
+    transform: scale(1.1); /* Aumenta o tamanho do cartão ao passar o mouse */
+}
+
+.card-image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+}
+
+.card-text {
+    font-size: 16px;
+    text-align: center;
+    padding: 5px;
+    background-color: rgba(0, 0, 0, 0.6); /* Fundo semitransparente */
+    color: white;
+    font-weight: bold;
+    display: none; /* Inicialmente escondido */
+}
+
+/* Resultado do jogo e botão de reset */
+#resultMessage {
+    margin-top: 20px;
+    font-size: 24px;
+    font-weight: bold;
+}
+
+#resetButton {
+    margin-top: 20px;
+    padding: 10px 20px;
+    font-size: 16px;
+    cursor: pointer;
+    background-color: #007BFF;
+    color: white;
+    border: none;
+    border-radius: 5px;
+}
+
+#resetButton:hover {
+    background-color: #0056b3;
+}
+
+/* Estilos para o footer */
+.footer-name {
+    margin-top: 10rem;  /* Dá uma distância do conteúdo acima */
+    display: flex;
+    justify-content: center; /* Alinha horizontalmente no centro */
+    align-items: center;     /* Alinha verticalmente no centro */
+    width: 100%;             /* Garante que o footer ocupe toda a largura */
+    font-size: 30px;
+    font-family: "Edu AU VIC WA NT Pre", 'cursive';
+    font-weight: bold;
+    color: #0cb351;
+    text-align: center;
+}
+
+/* Estilo para o rodapé */
+footer {
+    background-color: #f4f4f4;
+    padding: 20px;
+    border-top: 2px solid #ddd; /* Linha separadora */
+    width: 100%;
+}
+
+/* Responsividade para telas pequenas (smartphones) */
+@media (max-width: 480px) {
+    .container {
+        padding: 10px; /* Menos preenchimento em telas pequenas */
+    }
+
+    .card {
+        width: 80px; /* Reduz a largura dos cartões */
+        height: 120px; /* Reduz a altura dos cartões */
+    }
+
+    .card-text {
+        font-size: 12px; /* Ajusta o tamanho da fonte */
+    }
+
+    .text-01 {
+        font-size: 1.5rem; /* Reduz o tamanho do texto */
+    }
+
+    #resultMessage {
+        font-size: 18px; /* Ajusta o tamanho da mensagem de resultado */
+    }
+
+    #resetButton {
+        font-size: 14px; /* Ajusta o tamanho do botão */
+        padding: 8px 16px; /* Ajusta o preenchimento do botão */
+    }
+
+    .footer-name {
+        font-size: 20px; /* Ajusta o tamanho da fonte do footer */
+    }
+}
+
+/* Responsividade para tablets (telas médias) */
+@media (max-width: 768px) {
+    .container {
+        padding: 15px; /* Ajuste de preenchimento para tablets */
+    }
+
+    .card {
+        width: 100px; /* Ajusta o tamanho dos cartões */
+        height: 150px; /* Ajusta a altura dos cartões */
+    }
+
+    .card-text {
+        font-size: 14px; /* Ajusta o tamanho da fonte */
+    }
+
+    .text-01 {
+        font-size: 2rem; /* Ajusta o título */
+    }
+
+    #resultMessage {
+        font-size: 20px; /* Ajusta o tamanho da mensagem de resultado */
+    }
+
+    #resetButton {
+        font-size: 16px; /* Ajusta o tamanho do botão */
+    }
+
+    .footer-name {
+        font-size: 25px; /* Ajusta o tamanho da fonte do footer */
+    }
+}
+
+/* Responsividade para desktops (largura de tela maior) */
+@media (min-width: 1024px) {
+    .container {
+        padding: 20px; /* Maior preenchimento para telas grandes */
+    }
+
+    .card {
+        width: 120px; /* Tamanho padrão dos cartões */
+        height: 180px; /* Altura padrão dos cartões */
+    }
+
+    .card-text {
+        font-size: 16px; /* Tamanho normal da fonte */
+    }
+
+    .text-01 {
+        font-size: 3rem; /* Tamanho maior para telas grandes */
+    }
+
+    #resultMessage {
+        font-size: 24px; /* Tamanho normal da mensagem de resultado */
+    }
+
+    #resetButton {
+        font-size: 18px; /* Tamanho normal do botão */
+    }
+
+    .footer-name {
+        font-size: 30px; /* Tamanho normal do footer */
+    }
+}
